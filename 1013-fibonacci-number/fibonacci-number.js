@@ -3,7 +3,6 @@
  * @return {number}
  */
 var fib = function(n) {
-    let computedValue = {};
     if(n==0){
         return 0;
     }
@@ -11,11 +10,7 @@ var fib = function(n) {
     if(n === 1){
         return 1;
     }
-    if(computedValue[n]){
-        return computedValue[n];
-    }else{
-        computedValue[n] = fib(n-1) + fib(n-2)
-        return computedValue[n];
-    }
+        return fib(n-1) + fib(n-2);
+    
 
 };
