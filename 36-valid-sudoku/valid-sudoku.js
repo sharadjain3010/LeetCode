@@ -10,12 +10,12 @@ var isValidSudoku = function(board) {
             if(val !== '.'){
                 if( seen[`${val}_is_seen_at_row_${i}`] ||
                 seen[`${val}_is_seen_at_column_${j}`] ||
-                seen[`${val}_is_seen_at_box_${Math.ceil((i+1)/3)}_${Math.ceil((j+1)/3)}`]){
+                seen[`${val}_is_seen_at_box_${Math.floor(i/3)}_${Math.floor(j/3)}`]){
                     return false
                 }
                 seen[`${val}_is_seen_at_row_${i}`] = true;
                 seen[`${val}_is_seen_at_column_${j}`] = true;
-                seen[`${val}_is_seen_at_box_${Math.ceil((i+1)/3)}_${Math.ceil((j+1)/3)}`] = true;
+                seen[`${val}_is_seen_at_box_${Math.floor(i/3)}_${Math.floor(j/3)}`] = true;
             }
         }
     }
