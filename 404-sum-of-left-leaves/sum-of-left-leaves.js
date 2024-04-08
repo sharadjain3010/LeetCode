@@ -19,8 +19,5 @@ var sumOfLeftLeaves = function(root, isLeft = false) {
         return isLeft ? root.val : 0;
     }
     
-    const left =  sumOfLeftLeaves(root.left, true);
-    const right = sumOfLeftLeaves(root.right, false);
-
-    return left + right;
+    return sumOfLeftLeaves(root.left, true) + sumOfLeftLeaves(root.right, false);
 };
