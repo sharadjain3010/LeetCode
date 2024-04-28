@@ -10,6 +10,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
+ // BFS solution
 var maxDepth = function(root) {
     const arr = [];
     const queue = [root];
@@ -33,3 +34,8 @@ var maxDepth = function(root) {
 
     return arr.length;
 };
+
+// DFS solution
+// var maxDepth = function(root) {
+   
+// };
