@@ -13,9 +13,6 @@ var closeStrings = function(word1, word2) {
 
     for(let i=0; i<word1.length; i++){
         word1Map[word1[i]] ? word1Map[word1[i]] += 1 : word1Map[word1[i]] = 1; 
-    }
-
-    for(let i=0; i<word2.length; i++){
         word2Map[word2[i]] ? word2Map[word2[i]] += 1 : word2Map[word2[i]] = 1; 
     }
 
