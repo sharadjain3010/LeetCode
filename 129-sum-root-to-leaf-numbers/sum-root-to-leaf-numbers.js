@@ -12,10 +12,10 @@
  */
 var sumNumbers = function(root) {
     let sum = 0;
-    const helper = (root, rootVal=null)=>{
-        const rootValue = rootVal ? `${rootVal}${root.val}` : `${root.val}`;
+    const helper = (root, rootVal=0)=>{
+        const rootValue = rootVal*10 + root.val;
         if(root.left === null && root.right === null ){
-            sum += Number(rootValue);
+            sum += rootValue;
         }
         root.left && helper(root.left, rootValue);
         root.right && helper(root.right, rootValue);
