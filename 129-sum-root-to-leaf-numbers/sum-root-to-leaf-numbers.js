@@ -11,18 +11,16 @@
  * @return {number}
  */
 var sumNumbers = function(root) {
-    let arr = [];
+    let sum = 0;
     const helper = (root, rootVal=null)=>{
         const rootValue = rootVal ? `${rootVal}${root.val}` : `${root.val}`;
         if(root.left === null && root.right === null ){
-            arr.push(rootValue);
+            sum += Number(rootValue);
         }
         root.left && helper(root.left, rootValue);
         root.right && helper(root.right, rootValue);
     }
     helper(root);
-    return arr.reduce((acc, cur)=>{
-        return Number(acc) + Number(cur);
-    },0);
+    return sum;
 };
 
