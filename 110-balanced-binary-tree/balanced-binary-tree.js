@@ -20,7 +20,7 @@ var isBalanced = function(root) {
 
         const left = maxDepth(root.left);
         const right = maxDepth(root.right);
-        if(Math.abs(left-right) >1 ){
+        if(left-right > 1 || left-right < -1 ){
             isBalanced = false
         }
         return 1 + Math.max(left, right);
