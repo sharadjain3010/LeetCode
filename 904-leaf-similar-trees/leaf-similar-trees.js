@@ -29,11 +29,11 @@ var leafSimilar = function(root1, root2) {
     return true;
 };
 
-function bottomView(root, map, line=0){
+function bottomView(root, map){
     if(root.left === null && root.right === null){
         map.push(root.val);
     }
 
-    root.left && bottomView(root.left, map, line-1);
-    root.right && bottomView(root.right, map, line+1);
+    root.left && bottomView(root.left, map);
+    root.right && bottomView(root.right, map);
 }
