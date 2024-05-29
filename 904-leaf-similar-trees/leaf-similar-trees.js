@@ -21,10 +21,8 @@ var leafSimilar = function(root1, root2) {
     if(map1Arr.length !== map2Arr.length){
         return false;
     }
-    for(let i=0; i< map1Arr.length; i++){
-        if(map1Arr[i] !== map2Arr[i]){
-            return false;
-        }
+    if(map1Arr.toString() !== map2Arr.toString()){
+        return false;
     }
     return true;
 };
