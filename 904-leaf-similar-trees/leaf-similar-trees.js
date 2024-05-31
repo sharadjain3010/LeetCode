@@ -15,8 +15,8 @@ var leafSimilar = function(root1, root2) {
     let map1Arr = [];
     let map2Arr = [];
 
-    bottomView(root1, map1Arr);
-    bottomView(root2, map2Arr);
+    findLeafNodes(root1, map1Arr);
+    findLeafNodes(root2, map2Arr);
 
     if(map1Arr.length !== map2Arr.length){
         return false;
@@ -27,11 +27,11 @@ var leafSimilar = function(root1, root2) {
     return true;
 };
 
-function bottomView(root, map){
+function findLeafNodes(root, map){
     if(root.left === null && root.right === null){
         map.push(root.val);
     }
 
-    root.left && bottomView(root.left, map);
-    root.right && bottomView(root.right, map);
+    root.left && findLeafNodes(root.left, map);
+    root.right && findLeafNodes(root.right, map);
 }
