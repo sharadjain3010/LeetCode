@@ -12,8 +12,6 @@
  * @return {TreeNode}
  */
 var buildTree = function(preorder, inorder) {
-    console.log('pre - ',preorder);
-    console.log('in - ',inorder);
     if(preorder.length === 0){
         return null
     }
