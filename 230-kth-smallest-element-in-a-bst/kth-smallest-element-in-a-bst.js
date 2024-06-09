@@ -14,13 +14,17 @@
 var kthSmallest = function(root, k) {
     if(root == null) return null;
 
-    let treeArr = [];
+    let ans;
+    let count = 0;
 
     const traverseBinaryTree = (root)=>{
         root.left && traverseBinaryTree(root.left);
-        treeArr.push(root.val);
+        count++;
+        if(count === k){
+            ans = root.val;
+        }
         root.right && traverseBinaryTree(root.right);
     } 
     traverseBinaryTree(root);
-    return treeArr[k-1];
+    return ans;
 };
