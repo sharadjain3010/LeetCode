@@ -14,7 +14,6 @@
 var kthSmallest = function(root, k) {
     if(root == null) return null;
 
-    let min = 99999;
     let treeArr = [];
 
     const traverseBinaryTree = (root)=>{
