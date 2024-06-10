@@ -17,7 +17,6 @@ var isValidBST = function(root) {
     const validateBST = (root)=>{
         if(root === null) return 0;
         root.left && validateBST(root.left);
-        console.log(min, ' -- ', root.val);
         if(min<root.val){
             min = root.val;
         }else{
