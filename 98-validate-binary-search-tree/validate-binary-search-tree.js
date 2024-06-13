@@ -5,6 +5,8 @@
  *     this.left = (left===undefined ? null : left)
  *     this.right = (right===undefined ? null : right)
  * }
+ When we perform in order traversal in binary tree it returns sorted array
+ and there it can easily be checked to see if last value is less then next value
  */
 /**
  * @param {TreeNode} root
