@@ -14,12 +14,12 @@ var bstFromPreorder = function(preorder) {
     if(preorder.length == 0) return null;
 
     const createNode = (preorder)=>{
-        // if(preorder.length == 0) return null;
+        if(preorder.length == 0) return null;
         let root = new TreeNode(preorder[0], null, null);
         const leftTreeArr = preorder.filter((el)=>{return el<preorder[0]});
         const rightTreeArr =  preorder.filter((el)=>{return el>preorder[0]});
-        root.left = (leftTreeArr.length === 0) ? null : createNode(leftTreeArr);
-        root.right = (rightTreeArr.length === 0) ? null : createNode(rightTreeArr);
+        root.left = createNode(leftTreeArr);
+        root.right = createNode(rightTreeArr);
 
         return root;
     }
