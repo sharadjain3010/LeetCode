@@ -3,10 +3,10 @@
  * @return {number}
  */
 var missingNumber = function(nums) {
-    let i = 0;
-    while(i<nums.length){
-        if (!nums.includes(i)) return i;
-        i++; 
-    }
-    return i;
+   let sum = nums.reduce((acc, cur)=>{
+    return acc+cur;
+   },0);
+   const totalSum = (nums.length*(nums.length+1))/2;
+
+   return totalSum - sum;
 };
