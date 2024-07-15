@@ -6,7 +6,6 @@ var missingNumber = function(nums) {
    let sum = nums.reduce((acc, cur)=>{
     return acc+cur;
    },0);
-   const totalSum = (nums.length*(nums.length+1))/2;
+   return (nums.length*(nums.length+1))/2 - sum;
 
-   return totalSum - sum;
 };
