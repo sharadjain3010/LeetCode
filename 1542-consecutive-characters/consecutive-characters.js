@@ -3,17 +3,18 @@
  * @return {number}
  */
 var maxPower = function(s) {
+    let currentMax = 0;
     let max = 0;
-    let charsWithCount = {};
-    let lastChar;
+    let currentChar;
     for(let i=0; i<s.length; i++){
-        if(charsWithCount[s[i]] && lastChar === s[i]){
-            charsWithCount[s[i]] = charsWithCount[s[i]] + 1;
+        if(currentChar === s[i]){
+            currentMax++;
         }else{
-            charsWithCount[s[i]] = 1;
+            currentChar = s[i];
+            currentMax = 1;
         }
-        lastChar = s[i]
-        max = Math.max(max, charsWithCount[s[i]]);
+        max = Math.max(currentMax, max)
     }
+
     return max;
 };
