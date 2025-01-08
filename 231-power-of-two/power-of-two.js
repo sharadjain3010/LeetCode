@@ -3,23 +3,13 @@
  * @return {boolean}
  */
 var isPowerOfTwo = function(n) {
-    let isPower = false;
-
-    const powerOfTwoFun = (num)=>{
-        if(num === 1){
-            isPower = true;
-            return;
-        }
-
-        if(num%1 !== 0 || num === 0){
-            isPower = false;
-            return
-        }
-
-        powerOfTwoFun(num/2);
+    if(n === 1){
+        return true;
     }
 
-    powerOfTwoFun(n);
+    if(n%1 !== 0 || n === 0){
+        return false;
+    }
 
-    return isPower;
+    return isPowerOfTwo(n/2);
 };
