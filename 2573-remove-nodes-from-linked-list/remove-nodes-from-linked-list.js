@@ -11,20 +11,18 @@
  */
 var removeNodes = function(head) {
     let stack = [];
-    let currentElement;
     let current = head;
     while(current !== null){
-        currentElement = current.val;
-        while(stack.length > 0 && stack[stack.length-1] < currentElement ){
+        while(stack.length > 0 && stack[stack.length-1].val < current.val ){
             stack.pop();
         }
-        stack.push(current.val);
+        stack.push(current);
         current = current.next;
     }
     let dummyNode = new ListNode(0);
     let updatedList = dummyNode;
-    stack.forEach((el)=>{
-        dummyNode.next =  new ListNode(el);
+    stack.forEach((node)=>{
+        dummyNode.next = node
         dummyNode = dummyNode.next;
     });
 
