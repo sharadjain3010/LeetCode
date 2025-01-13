@@ -3,19 +3,19 @@
  * @param {number} n
  * @return {number}
  */
-function myPow(base, exponent) {
-  if (exponent === 0) {
+function myPow(x, n) {
+  if(n === 0){
     return 1;
   }
 
-  if (exponent < 0) {
-    return 1 / myPow(base, -exponent);
+  if(n < 0){
+    return 1/myPow(x, -n); 
   }
 
-  if (exponent % 2 === 0) {
-    const halfPower = myPow(base, exponent / 2);
-    return halfPower * halfPower;
-  } else {
-    return base * myPow(base, exponent - 1);
+  if(n%2 === 0){
+    const halfCal = myPow(x, (n/2));
+    return halfCal*halfCal;
+  }else{
+    return x * myPow(x, n-1);
   }
 }
