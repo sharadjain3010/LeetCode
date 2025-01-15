@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var isPalindrome = function(s) {
-    const updatedStr = s.replace(/[^a-z0-9]/gmi,'');
+    const updatedStr = s.replace(/[^a-z0-9]/gmi,'').toLowerCase();
 
     if(updatedStr.length <= 1){
         return true;
@@ -13,7 +13,7 @@ var isPalindrome = function(s) {
     let i = 0;
     let j = updatedStr.length-1; 
     while(i<j){
-        if(updatedStr[i].toLowerCase() !== updatedStr[j].toLowerCase()){
+        if(updatedStr[i] !== updatedStr[j]){
             isPalindrome = false;
             break;
         }
