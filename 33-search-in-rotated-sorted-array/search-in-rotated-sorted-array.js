@@ -30,27 +30,6 @@ var search = function(nums, target) {
                 j = m-1;
             }
         }
-
-        // if(nums[i] <= nums[j]){
-        //     if(nums[m] === target){
-        //         return m;
-        //     }else if(target > nums[m]){
-        //         i = m+1;
-        //     }else if(target < nums[m]){
-        //         j = m-1;
-        //     }
-        // }else{
-        //     if(target === nums[m]){
-        //         return m; 
-        //     }else if((target < nums[m] && nums[m] >= nums[j]) ||
-        //     (target > nums[m] && target <= nums[j]) ){
-        //         i = m+1;
-        //     }else if((target < nums[m] && nums[m] <= nums[j])
-        //     || (target > nums[m] && target >= nums[j])){
-        //         j = m-1;
-        //     }
-            
-        //  }
         
     }
 
