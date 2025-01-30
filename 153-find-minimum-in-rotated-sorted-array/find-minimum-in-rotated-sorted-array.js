@@ -10,10 +10,8 @@ var findMin = function(nums) {
 
     while(i<=j){
         const m = Math.floor((i+j)/2);
-        console.log(nums[m], minEle);
         minEle = Math.min(nums[m], minEle);
         if(nums[i] < nums[j]){
-            console.log('inside i<j', nums[i], nums[j]);
             return Math.min(nums[i], minEle);
         }
         if(nums[i] <= nums[m]){
